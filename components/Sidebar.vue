@@ -8,7 +8,7 @@
   >
     <div class="p-6 flex items-center justify-between gap-2">
       <h1 class="font-bold text-xl">Invo.</h1>
-      <button v-if="isOpen" @click="closeSidebar" class="cursor-pointer">
+      <button v-if="isOpen && !hideSidebarBtn" @click="closeSidebar" class="cursor-pointer">
         <Icon name="line-md:close-small" class="size-6 text-gray-500 mt-1" />
       </button>
     </div>
@@ -41,6 +41,7 @@
 defineProps<{
   isOpen: boolean
   closeSidebar: (e: MouseEvent) => void
+  hideSidebarBtn: boolean
 }>()
 
 const sidebarLinks = [
