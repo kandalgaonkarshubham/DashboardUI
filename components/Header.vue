@@ -19,7 +19,7 @@
         <p class="absolute -top-1 -right-1 bg-primary text-white text-[0.60rem] text-center font-bold rounded-full size-4 p-0 m-0">2</p>
         <Icon name="duo-icons:bell" class="size-6" />
       </div>
-      <div class="relative">
+      <div class="block md:hidden relative">
         <button @click="isProfileOpen = !isProfileOpen">
           <Icon name="line-md:menu" class="size-6 text-gray-500" />
         </button>
