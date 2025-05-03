@@ -1,9 +1,9 @@
 <template>
   <div class="bg-white rounded-2xl shadow-lg p-8">
-    <h2 class="text-xl font-bold mb-6 text-gray-900">Recent Invoices</h2>
+    <h2 class="text-xl font-semibold mb-6 text-gray-800">Recent Invoices</h2>
     <div class="overflow-x-auto">
       <table class="w-full text-sm text-left">
-        <thead class="text-gray-400 uppercase text-xs border-b">
+        <thead class="text-gray-400 uppercase text-xs border-y border-gray-300">
           <tr>
             <th class="py-3 px-4 font-semibold">No</th>
             <th class="py-3 px-4 font-semibold">Date Created</th>
@@ -16,16 +16,16 @@
           <tr
             v-for="(invoice, index) in invoices"
             :key="index"
-            class="hover:bg-gray-50 border-t transition"
+            class="hover:bg-gray-50 font-semibold text-gray-700 transition"
           >
-            <td class="py-3 px-4 font-medium text-gray-700">{{ invoice.no }}</td>
-            <td class="py-3 px-4 text-gray-500">{{ invoice.date }}</td>
-            <td class="py-3 px-4 text-gray-700">{{ invoice.client }}</td>
-            <td class="py-3 px-4 font-semibold text-gray-900">$ {{ invoice.amount }}</td>
+            <td class="py-3 px-4">{{ invoice.no }}</td>
+            <td class="py-3 px-4">{{ invoice.date }}</td>
+            <td class="py-3 px-4">{{ invoice.client }}</td>
+            <td class="py-3 px-4">$ {{ invoice.amount }}</td>
             <td class="py-3 px-4">
               <span 
                 :class="[
-                  'px-3 py-1 rounded-full uppercase text-xs font-bold',
+                  'px-3 py-1 rounded-full uppercase text-xs',
                   invoice.status === 'overdue' ? 'text-red-600 bg-red-100' : 'text-green-600 bg-green-100',
                 ]"
               >

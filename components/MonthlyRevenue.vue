@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-2xl shadow-lg p-8">
-    <h2 class="text-xl font-bold mb-6 text-gray-900">Monthly Revenue</h2>
+    <h2 class="text-xl font-semibold mb-6 text-gray-800">Monthly Revenue</h2>
     <div class="text-3xl font-extrabold mb-2 text-gray-900">$15,000</div>
 
     <div class="flex items-end justify-between h-40 mt-8">
