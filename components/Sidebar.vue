@@ -13,15 +13,26 @@
       </button>
     </div>
     <nav class="mt-6 space-y-4 px-4">
-      <SidebarLink
+      <button
         v-for="(link, index) in sidebarLinks"
         :key="index"
-        v-bind="link"
-      />
+        class="flex items-center w-full text-left text-gray-600 font-semibold px-3 py-2 rounded-lg transition-colors duration-200
+              hover:bg-primary/10 hover:text-primary cursor-pointer"
+        :class="{ 'bg-primary hover:!bg-primary text-white hover:!text-white': link.active }"
+      >
+        <Icon :name="link.icon" class="size-6" />
+        <span class="ml-3 flex-1">{{ link.text }}</span>
+        <span v-if="link.hasNotification" class="ml-auto size-4 bg-primary text-white text-[0.60rem] text-center rounded-full">{{link.count}}</span>
+      </button>
     </nav>
 
     <div class="absolute bottom-4 w-full px-4">
-      <SidebarLink icon="duo-icons:dashboard" text="Log Out" />
+      <button
+        class="flex items-center w-full text-left text-gray-600 font-semibold px-3 py-2 rounded-lg transition-colors duration-200 hover:bg-primary/10 hover:text-primary cursor-pointer"
+      >
+        <Icon name="duo-icons:dashboard" class="size-6" />
+        <span class="ml-3 flex-1">Log Out</span>
+      </button>
     </div>
   </aside>
 </template>
@@ -41,5 +52,4 @@ const sidebarLinks = [
   { icon: 'duo-icons:settings', text: 'Settings' },
   { icon: 'duo-icons:alert-octagon', text: 'Help' }
 ]
-
 </script>
