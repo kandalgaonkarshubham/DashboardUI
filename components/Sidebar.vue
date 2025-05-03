@@ -22,7 +22,7 @@
       >
         <Icon :name="link.icon" class="size-6" />
         <span class="ml-3 flex-1">{{ link.text }}</span>
-        <span v-if="link.hasNotification" class="ml-auto size-4 bg-primary text-white text-[0.60rem] text-center rounded-full">{{link.count}}</span>
+        <span v-if="link.hasNotification" class="ml-auto size-4 bg-primary text-white text-[0.60rem] text-center rounded-full pt-[0.01rem]">{{link.count}}</span>
       </button>
     </nav>
 
